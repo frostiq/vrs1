@@ -34,6 +34,7 @@ namespace VROrienteering.Controllers
             }
 
             var @group = await _context.Groups
+                .Include(m => m.Members)
                 .SingleOrDefaultAsync(m => m.Id == id);
             if (@group == null)
             {

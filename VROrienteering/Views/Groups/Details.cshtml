@@ -16,6 +16,12 @@
         <dd>
             @Html.DisplayFor(model => model.Name)
         </dd>
+        <dt>
+            Members
+        </dt>
+        <dd>
+            @string.Join(", ", Model.Members)
+        </dd>
     </dl>
 </div>
 <div>
